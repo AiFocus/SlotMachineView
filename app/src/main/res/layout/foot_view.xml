@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/theme_color"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:gravity="center">
+
+        <View
+            style="@style/line"
+            android:background="#BFBFBF"
+            android:layout_width="64dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="已经到底"
+            android:textColor="#BFBFBF"
+            android:textSize="@dimen/sp_12" />
+
+        <View
+            style="@style/line"
+            android:background="#BFBFBF"
+            android:layout_width="64dp" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

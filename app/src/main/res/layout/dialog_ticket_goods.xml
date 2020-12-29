@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="285dp"
+    android:layout_height="465dp"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_prompt"
+        android:layout_width="285dp"
+        android:layout_height="249dp"
+        android:layout_centerInParent="true"
+        android:background="#FFD528">
+
+
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜，你中签了！"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:textSize="22sp"
+            android:textColor="#D9372B"/>
+
+        <TextView
+            android:id="@+id/tv_continue_draw"
+            android:layout_width="190dp"
+            android:layout_height="48dp"
+            android:text="继续抽签"
+            android:padding="6dp"
+            android:gravity="center"
+            android:background="@drawable/round_corner_lottery_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/tv_prompt"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_check_codes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看中签"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/tv_continue_draw"
+            android:textColor="#906300"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_ticket_goods_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"/>
+    
+    
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="28dp"
+        android:background="@color/white"
+        android:layout_below="@+id/layout_prompt"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_close"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"/>
+    
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_root"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="#071624">
+
+            <TextView
+                android:id="@+id/tv_sum_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#7Fffffff"
+                android:layout_marginLeft="19dp"
+                android:text="金币余额"/>
+
+            <com.rain.slotmachineview.view.NumberAnimTextView
+                android:id="@+id/tv_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/tv_sum_title"
+                android:textColor="@color/white"
+                android:layout_marginLeft="19dp"
+                android:text=""/>
+
+
+            <TextView
+                android:id="@+id/tv_sum_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_alignBaseline="@+id/tv_sum"
+                android:layout_toRightOf="@+id/tv_sum"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:text="饮币"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_ticket_goods"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="#071624">
+
+
+            <TextView
+                android:id="@+id/tv_win_product_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#7Fffffff"
+                android:layout_marginLeft="20dp"
+                android:text="中签商品"/>
+
+            <com.rain.slotmachineview.view.NumberAnimTextView
+                android:id="@+id/tv_sum_win_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_alignLeft="@+id/tv_win_product_title"
+                android:layout_below="@+id/tv_win_product_title"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:text=""/>
+
+
+            <TextView
+                android:id="@+id/tv_sum_win_productunit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_alignBaseline="@+id/tv_sum_win_product"
+                android:layout_toRightOf="@+id/tv_sum_win_product"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:text="件"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_info">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:overScrollMode="never"
+            />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+    <include
+        android:id="@+id/layout_empty"
+        layout="@layout/view_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
